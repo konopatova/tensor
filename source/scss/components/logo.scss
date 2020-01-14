@@ -1,0 +1,23 @@
+.logo {
+  flex-shrink: 0;
+  display: block;
+  height: auto;
+
+  .logo-pic {
+    @include transition(fill);
+    // fill: black;
+
+    &:hover {
+      @include transition(fill);
+      fill: $main-accent-color;
+    }
+  }
+}
+
+.header__logo-pic {
+  flex-shrink: 0;
+  width: 106px;
+  height: 40px;
+  margin-right: 8px;
+  transition: width 0.2s linear, height 0.2s linear;
+}

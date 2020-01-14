@@ -1,0 +1,27 @@
+.breadcrumbs {
+  @include tablet {
+    display: none;
+  }
+}
+
+.breadcrumbs__item {
+  cursor: pointer;
+  align-items: baseline;
+  font-size: 14px !important;
+  color: $breadcrumbs-color;
+}
+
+.breadcrumbs__name {
+  margin-left: -4px;
+}
+
+.icon-Home::before {
+  content: "\e920";
+  color: $breadcrumbs-color;
+}
+
+.icon-DayForward:before {
+  font-size: 14px !important;
+  content: "\e666";
+  color: $breadcrumbs-color;
+}

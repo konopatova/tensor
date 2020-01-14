@@ -1,0 +1,137 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  font-size: 20px;
+  line-height: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #ffffff;
+  height: 84px;
+  transition: box-shadow 0.2s linear, height 0.2s linear, font 0.2s linear;
+
+  &--active {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    height: 48px;
+    font-size: 18px;
+    line-height: 28px;
+    color: $light-font-color;
+    transition: box-shadow 0.2s linear, height 0.2s linear, font 0.2s linear;
+
+    .burger-button {
+      .burger-button__line {
+        transition: margin 0.2s linear;
+        margin-top: 3px;
+      }
+    }
+
+    .header__logo-pic {
+      width: 73px;
+      height: 28px;
+      transition: width 0.2s linear, height 0.2s linear;
+    }
+
+    &.header {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.header__left,
+.header__right {
+  display: inline-flex;
+  white-space: nowrap;
+  align-items: flex-end;
+}
+
+.header__right {
+  @include mobile {
+    width: auto;
+  }
+}
+
+.header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include mobile {
+    flex-wrap: nowrap;
+  }
+}
+
+.header__list {
+  @include list-reset;
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header__item {
+  margin-right: 4px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &::before {
+    display: inline-block;
+    content: "";
+    width: 0;
+    height: 10px;
+    margin: 0 16px;
+    border-left: 1px dotted #cccccc;
+  }
+
+  &:first-child::before {
+    display: none;
+  }
+
+  &:last-child::after {
+    display: inline-block;
+    content: "";
+    width: 0;
+    height: 10px;
+    margin: 0 16px;
+    border-left: 1px dotted #cccccc;
+  }
+}
+
+.header__link {
+  color: #333333;
+  text-decoration: none;
+  flex-shrink: 0;
+  cursor: pointer;
+  padding-bottom: 15px;
+  border-bottom: 4px solid transparent;
+  @include transition(border);
+
+  &:hover,
+  &:focus {
+    @include transition(border);
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+
+  // &--active,
+  // &:active {
+  //   @include transition(background-color);
+  //   background-color: $main-accent-color;
+  // }
+}
+
+.header__title {
+  margin-right: 16px;
+  text-overflow: ellipsis;
+}
+
+.header__nav {
+  @include tablet {
+    flex-grow: 1;
+    flex-basis: 90%;
+    width: 100%;
+    display: none;
+  }
+}

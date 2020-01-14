@@ -1,0 +1,34 @@
+@font-face {
+  font-family: "TensorFont";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/TensorFont.woff") format("woff"),
+  url("../fonts/TensorFont.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "TensorFont";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/TensorFontBold.woff") format("woff"),
+  url("../fonts/TensorFontBold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "cbuc-icons24";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/cbuc-icons24.woff") format("woff"),
+  url("../fonts/cbuc-icons24.ttf") format("ttf"),
+  url("../fonts/cbuc-icons24.svg") format("svg");
+}
+
+@font-face {
+  font-family: "cbuc-icons";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/cbuc-icons.woff") format("woff"),
+  url("../fonts/cbuc-icons.ttf") format("ttf"),
+  url("../fonts/cbuc-icons.svg") format("svg");
+}
+

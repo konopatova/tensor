@@ -1,0 +1,77 @@
+.icon-16,
+.icon-small {
+  font-size: 16px !important;
+  line-height: 16px !important;
+  width: 16px;
+  height: 16px;
+  font-family: cbuc-icons !important;
+}
+
+.icon-24,
+.icon-medium {
+  font-size: 24px !important;
+  line-height: 24px !important;
+  width: 24px;
+  height: 24px;
+  font-family: cbuc-icons24 !important;
+}
+
+.icon-default {
+  font-size: 24px !important;
+  line-height: 24px !important;
+  width: 24px;
+  height: 24px;
+  font-family: cbuc-icons24 !important;
+}
+
+.icon-32,
+.icon-large {
+  font-size: 32px !important;
+  line-height: 32px !important;
+  width: 32px;
+  height: 32px;
+  font-family: cbuc-icons !important;
+}
+
+.icon-attention {
+  color: #fec63f;
+}
+
+.icon-done {
+  color: #069922;
+}
+
+.icon-error {
+  color: #d04d4d;
+}
+
+.icon-primary {
+  color: #587ab0;
+  fill: #587ab0;
+}
+
+.icon-disabled {
+  color: #ccc;
+  fill: #ccc;
+}
+
+.icon-hover {
+  color: #ff7033;
+}
+
+.icon-16,
+.icon-24,
+.icon-32,
+.icon-default,
+.icon-large,
+.icon-medium,
+.icon-size,
+.icon-small {
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  display: inline-block;
+}
