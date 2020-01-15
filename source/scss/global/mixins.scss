@@ -170,16 +170,6 @@
   }
 }
 
-@mixin arrow-reverse {
-  transition: 0.2s all;
-  background: url(../img/svg/arrow-right-ico.svg) no-repeat right center;
-
-  &:hover,
-  &:focus {
-    background: url(../img/svg/arrow-right-ico.svg) no-repeat 95% center;
-  }
-}
-
 @mixin hover-hover {
   @media (hover: hover) {
     /*Mouse device styles here */

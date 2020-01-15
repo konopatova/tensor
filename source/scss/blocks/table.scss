@@ -1,0 +1,52 @@
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 16px;
+  border-spacing: 0;
+  table-layout: fixed;
+
+  td {
+    font-size: 15px;
+  }
+
+  th {
+    background-color: $bg-block-color;
+  }
+}
+
+.table-head {
+  font-size: 18px;
+  color: #333333;
+}
+
+.table-th,
+.table-td {
+  box-sizing: border-box;
+  height: 41px;
+  vertical-align: middle;
+}
+
+.table-th {
+  font-weight: 400;
+
+  &--first {
+    width: 70%;
+  }
+
+  &--second {
+    width: 30%;
+  }
+}
+
+.table-tr {
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.table--align-left {
+  text-align: left;
+  padding-left: 16px;
+}
+
+.table--align-center {
+  text-align: center;
+}

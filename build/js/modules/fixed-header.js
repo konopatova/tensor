@@ -11,7 +11,8 @@
   window.addEventListener('scroll', function () {
     var scrolled = window.scrollY;
     var header = document.querySelector(".header");
-    scrolled > 30 ? header.classList.add('header--active') : header.classList.remove('header--active')
+    scrolled > 30 ?
+      header.classList.add('header--active') : header.classList.remove('header--active')
   })
 
 })();

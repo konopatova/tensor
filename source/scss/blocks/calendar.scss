@@ -1,7 +1,13 @@
 .calendar {
+  margin-top: 4px;
   text-align: right;
   font-size: 14px;
   color: $calendar-color;
+
+  @include mobile {
+    text-align: left;
+    padding: 5px 0;
+  }
 }
 
 .icon-Calendar:before {

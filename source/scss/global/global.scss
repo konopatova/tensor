@@ -12,6 +12,11 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -27,7 +32,7 @@ body {
   font-size: 18px;
   line-height: 24px;
   font-weight: normal;
-  color: $main-font-color;
+  color: $light-font-color;
   background-color: #ffffff;
 }
 
@@ -80,11 +85,16 @@ picture {
   line-height: 46px;
   margin: 0;
   font-weight: 400;
+  color: $main-font-color;
 
   @include tablet {
     font-size: 20px;
     line-height: 24px;
     font-weight: 700;
+  }
+
+  @include mobile {
+    margin-top: 10px;
   }
 }
 
@@ -93,6 +103,7 @@ picture {
   line-height: 44px;
   margin: 0;
   font-weight: 400;
+  color: $main-font-color;
 
   @include tablet {
     font-size: 20px;
@@ -105,6 +116,7 @@ picture {
   line-height: 32px;
   margin: 0;
   font-weight: 400;
+  color: $main-font-color;
 
   @include tablet {
     font-size: 18px;
@@ -114,4 +126,16 @@ picture {
 
 .heading-center {
   text-align: center;
+}
+
+.mt-24 {
+  margin-top: 24px;
+}
+
+.pb-16 {
+  padding-bottom: 16px;
+}
+
+.pb-8 {
+  padding-bottom: 16px;
 }

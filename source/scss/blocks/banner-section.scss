@@ -1,0 +1,80 @@
+.banner {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  background-color: $main-accent-color;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  padding: 18px 32px;
+  margin-bottom: 32px;
+
+  @include tablet {
+    align-items: flex-start;
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  &:hover {
+    .banner__link-arrow {
+      transition: transform 0.1s linear;
+      transform: translateX(20%);
+    }
+  }
+}
+
+.banner__link {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  @include mobile {
+    margin-top: 16px;
+  }
+}
+
+.banner__header {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 30px;
+  margin-right: 20px;
+
+  @include tablet {
+    max-width: 60%;
+  }
+
+  @include mobile {
+    margin-right: 0;
+    max-width: 100%;
+  }
+}
+
+.banner__link-text {
+  flex-shrink: 0;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  @include transition(border);
+
+  &:hover {
+    @include transition(border);
+    border-bottom: 1px solid white;
+  }
+}
+
+.banner__link-arrow {
+  font-family: cbuc-icons;
+  display: inline-block;
+  margin-left: 10px;
+  transition: transform 0.1s linear;
+  will-change: transform;
+}
+
+.icon-TFFollow:before {
+  font-style: normal;
+  content: "\e740";
+}
