@@ -25,6 +25,13 @@
         transition: margin 0.2s linear;
         margin-top: 3px;
       }
+
+      &:hover {
+        .burger-button__line {
+          @include transition(background-color);
+          background-color: $accent-color-2;
+        }
+      }
     }
 
     .header__logo-pic {
@@ -80,10 +87,9 @@
 
 .header__nav {
   @include tablet {
+    width: 100%;
     flex-grow: 1;
     flex-basis: 90%;
-    width: 100%;
-    display: none;
   }
 }
 

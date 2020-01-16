@@ -124,6 +124,19 @@ picture {
   }
 }
 
+.heading-h4 {
+  font-size: 20px;
+  line-height: 24px;
+  color: #333;
+  margin: 0;
+  font-weight: 400;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
 .heading-center {
   text-align: center;
 }
@@ -138,4 +151,28 @@ picture {
 
 .pb-8 {
   padding-bottom: 16px;
+}
+
+.hidden-xs {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.hidden-sm {
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.hidden-md {
+  @include laptop {
+    display: none !important;
+  }
+}
+
+.show-sm {
+  @include tablet-and-bigger {
+    display: none !important;
+  }
 }

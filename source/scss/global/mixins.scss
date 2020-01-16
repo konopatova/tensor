@@ -1,3 +1,9 @@
+@mixin tablet-and-bigger {
+  @media (min-width: $width-tablet) {
+    @content;
+  }
+}
+
 @mixin desktop-only {
   @media (min-width: $width-desktop) {
     @content;

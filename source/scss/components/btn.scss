@@ -14,38 +14,3 @@
   text-transform: uppercase;
   background-color: $main-accent-color;
 }
-
-.burger-button {
-  margin-left: 10px;
-  flex-shrink: 0;
-  cursor: pointer;
-  position: relative;
-  display: inline-block;
-  width: 16px;
-  height: 26px;
-  transform: translateY(2px);
-  color: #000;
-  @include transition(background-color);
-
-  &:hover {
-    .burger-button__line {
-      @include transition(background-color);
-      background-color: $accent-color-2;
-    }
-  }
-}
-
-.burger-button__area {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.burger-button__line {
-  display: block;
-  height: 2px;
-  background-color: #000;
-  margin-top: 5px;
-}

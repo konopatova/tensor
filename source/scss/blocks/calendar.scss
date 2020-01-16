@@ -3,6 +3,7 @@
   text-align: right;
   font-size: 14px;
   color: $calendar-color;
+  padding: 8px 0;
 
   @include mobile {
     text-align: left;

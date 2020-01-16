@@ -10,11 +10,9 @@
 }
 
 .article {
-  // flex-basis: 75%;
-  // max-width: 75%;
   flex: 1;
 
-  @include laptop {
+  @include mobile {
     flex-basis: 100%;
     max-width: 100%;
   }
@@ -23,10 +21,6 @@
 .aside {
   flex-basis: 25%;
   max-width: 25%;
-
-  @include laptop {
-    display: none;
-  }
 }
 
 .article__text {

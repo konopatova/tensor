@@ -1,0 +1,132 @@
+.goods__item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  overflow: hidden;
+  max-width: 100%;
+  border: 1px solid #e4e4e4;
+  border-radius: 8px;
+  padding: 0 30px;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  @include transitionMulty(background-color, border);
+
+  &:hover {
+    @include transitionMulty(background-color, border);
+    border: 1px solid $main-accent-color;
+    background-color: #f0f5fb;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    padding: 0;
+    padding-bottom: 14px;
+  }
+}
+
+.goods__column {
+  width: calc((100% - 35%) / 2);
+  position: relative;
+}
+
+.goods__header {
+  display: inline-flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  font-weight: normal;
+
+  @include mobile {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+.goods__about {
+  width: 35%;
+
+  @include mobile {
+    width: 100%;
+    padding: 0 10px;
+    order: 2;
+  }
+}
+
+.goods__picture {
+  @include mobile {
+    width: 100%;
+    order: 1;
+  }
+}
+
+.goods__price {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 28px;
+  padding-left: 24px;
+  color: #1e1e1e;
+  text-align: center;
+  margin-left: auto;
+}
+
+.goods__price-value {
+  flex-shrink: 0;
+}
+
+.goods__price-image {
+  padding-left: 15px;
+  width: 62px;
+  height: 22px;
+  opacity: 0.35;
+
+  @include mobile {
+    padding-left: 0;
+  }
+}
+
+.goods__text {
+  font-size: 14px;
+  line-height: 18px;
+
+  &--small {
+    text-decoration: underline;
+  }
+
+  &--fixed {
+    white-space: nowrap;
+
+    @include tablet {
+      white-space: normal;
+    }
+  }
+}
+
+.goods__image {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+  width: auto;
+
+  &--1 {
+    position: absolute;
+    transform: translate(-46%, -2%);
+  }
+
+  @include mobile {
+    position: relative;
+  }
+}
+
+.goods__mobile {
+  width: 50%;
+  flex-shrink: 0;
+  text-align: center;
+  padding-left: 10px;
+}
