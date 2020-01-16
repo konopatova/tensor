@@ -11,16 +11,13 @@
 
 .article {
   flex: 1;
+  margin-right: 40px;
 
   @include mobile {
+    margin-right: 0;
     flex-basis: 100%;
     max-width: 100%;
   }
-}
-
-.aside {
-  flex-basis: 25%;
-  max-width: 25%;
 }
 
 .article__text {

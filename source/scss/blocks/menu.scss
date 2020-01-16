@@ -7,8 +7,7 @@
   padding-top: 84px;
   z-index: -1;
   background-color: #ffffff;
-  animation: slide-top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0.05s reverse
-    both;
+  animation: swing-in-top-fwd 0.5s cubic-bezier(0.18, 0.89, 1, 1.44) 0.1s both;
   user-select: none;
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -26,12 +25,16 @@
   }
 }
 
-@keyframes slide-top {
+@keyframes swing-in-top-fwd {
   0% {
-    transform: translateY(0);
+    transform: rotateX(-100deg);
+    transform-origin: top;
+    opacity: 0;
   }
   100% {
-    transform: translateY(-200px);
+    transform: rotateX(0deg);
+    transform-origin: top;
+    opacity: 1;
   }
 }
 
@@ -51,7 +54,7 @@
 }
 
 .menu__item-wrap {
-  padding: 0 12px 24px;
+  padding: 0 12px 40px;
   flex-basis: 25%;
   max-width: 25%;
   flex-shrink: 0;
