@@ -171,8 +171,17 @@ picture {
   }
 }
 
+.hidden {
+  display: none !important;
+}
+
 .show-sm {
   @include tablet-and-bigger {
     display: none !important;
   }
+}
+
+.anchor-block {
+  position: relative;
+  top: -50px;
 }

@@ -7,6 +7,24 @@
 
 .breadcrumbs__item-name {
   margin-left: -4px;
+  text-decoration: none;
+  padding-bottom: 1px;
+  border-bottom: 1px solid transparent;
+  @include transitionMulty(color, border);
+
+  &:hover {
+    color: $link-hover-color;
+    border-bottom: 1px solid $link-hover-color;
+    @include transitionMulty(color, border);
+  }
+
+  &:active {
+    color: $accent-color-2;
+  }
+
+  a:visited {
+    color: $link-hover-color;
+  }
 }
 
 .icon-Home::before {

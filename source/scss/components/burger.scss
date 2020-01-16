@@ -15,6 +15,11 @@
       @include transition(background-color);
       background-color: $accent-color-2;
     }
+
+    .burger-button__close {
+      @include transition(color);
+      color: $accent-color-2;
+    }
   }
 }
 
@@ -31,4 +36,22 @@
   height: 2px;
   background-color: #000000;
   margin-top: 5px;
+}
+
+.burger-button__open {
+  position: relative;
+}
+
+.burger-button__close {
+  display: inline-block;
+  font-family: cbuc-icons;
+  font-size: 26px;
+  color: $main-font-color;
+  z-index: 2;
+  transform: translate(-6px, 0);
+  @include transition(color);
+}
+
+.icon-Close:before {
+  content: "\e66c";
 }

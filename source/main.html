@@ -19,7 +19,7 @@
     <link href="css/style.min.css" rel="stylesheet" />
   </head>
   <body>
-    <header class="header">
+    <header class="header header--visible">
       <div class="container">
         <div class="header__container">
           <div class="header__left">
@@ -30,7 +30,7 @@
                   </svg>
                 </a>
               </div>
-              <span class="header__title">
+              <span class="header__title hidden-xs">
                 Для магазинов и аптек
               </span>
             </div>
@@ -39,7 +39,7 @@
               <nav class="header__nav hidden-sm">
                 <ul class="header__nav-list">
                   <li class="header__nav-item">
-                    <a href="#" class="header__nav-link">Оборудование</a>
+                    <a href="https://sbis.ru/catalog/yaroslavl" class="header__nav-link">Оборудование</a>
                   </li>
                   <li class="header__nav-item">
                     <a href="#" class="header__nav-link">Возможности</a>
@@ -53,13 +53,59 @@
                 </ul>
               </nav>
 
-              <span class="burger-button">
-                <span class="burger-button__line"></span>
-                <span class="burger-button__line"></span>
-                <span class="burger-button__line"></span>
-                <span class="burger-button__area"></span>
-              </span>
+              <div class="burger-button">
+                <div class="burger-button__open">
+                  <span class="burger-button__line"></span>
+                  <span class="burger-button__line"></span>
+                  <span class="burger-button__line"></span>
+                  <span class="burger-button__area"></span>
+                </div>
+                <span class="burger-button__close icon-Close hidden"></span>
+              </div>
             </div>
+          </div>
+        </div>
+
+        <div class="dropdown-menu dropdown-menu--padding dropdown-menu--closed">
+          <div class="dropdown-menu__content container">
+            <ul class="menu__list">
+              <li class="menu__item-wrap">
+                <a href="#" class="menu__item menu__item-link">Ссылка</a>
+              </li>
+              <li class="menu__item-wrap">
+                <a href="#" class="menu__item menu__item-link">Ссылка</a>
+              </li>
+              <li class="menu__item-wrap">
+                <a href="#" class="menu__item menu__item-link">Ссылка</a>
+              </li>
+              <li class="menu__item-wrap">
+                <a href="#" class="menu__item menu__item-link">Ссылка</a>
+              </li>
+              <li class="menu__item-wrap">
+                <a href="#" class="menu__item menu__item-link">Ссылка</a>
+              </li>
+              <li class="menu__item-wrap">
+                <a href="#" class="menu__item menu__item-link">Ссылка</a>
+              </li>
+              <li class="menu__item-wrap">
+                <a href="#" class="menu__item menu__item-link">Ссылка</a>
+              </li>
+              <li class="menu__item-wrap">
+                <a href="#" class="menu__item menu__item-link">Ссылка</a>
+              </li>
+              <li class="menu__item-wrap">
+                <a href="#" class="menu__item menu__item-link">Ссылка</a>
+              </li>
+              <li class="menu__item-wrap">
+                <a href="#" class="menu__item menu__item-link">Ссылка</a>
+              </li>
+              <li class="menu__item-wrap">
+                <a href="#" class="menu__item menu__item-link">Ссылка</a>
+              </li>
+              <li class="menu__item-wrap">
+                <a href="#" class="menu__item menu__item-link">Ссылка</a>
+              </li>
+            </ul>
           </div>
         </div>
       </header>
@@ -258,6 +304,7 @@
               </div>
 
               <div class="article__section">
+                <div class="anchor-block" id="registration"></div>
                 <h2 class="heading-h2 pb-16">Как зарегистрироваться в системе маркировки?</h2>
                 <p class="article__text">Для регистрации нужна усиленная квалифицированная электронная подпись на носителе Рутокен.</p>
                 <div class="pb-8">
@@ -270,13 +317,15 @@
                     <p>Установите необходимое ПО:</p>
                     <p>- операционная система Windows 7 / Mac OS X 10.8 или новее</p>
                     <p>- браузер Google Chrome, Mozilla Firefox, Opera, Internet Explorer 11, Safari</p>
-                    <p>- плагин <a class="article__text-link" href="#">КриптоПро</a>, <a class="article__text-link" href="#">Рутокен</a> или <a class="article__text-link" href="#">VipNet</a></p>
+                    <p>- плагин <a class="article__text-link" href="https://www.cryptopro.ru/user?destination=node/148">КриптоПро</a>, <a class="article__text-link" href="ttps://www.rutoken.ru/">Рутокен</a> или <a
+                        class="article__text-link" href="https://infotecs.ru/downloads/besplatnye-produkty/">VipNet</a></p>
                     <p>- сертифицированное СКЗИ</p>
                   </div>
                 </div>
                 <div class="num-points pb-8">
                   <div class="number">2.</div>
-                  <p>Откройте сайт <a class="article__text-link" href="#">Честный знак</a> и нажмите «Зарегистрируйтесь». Убедитесь, что вы все настроили правильно, и нажмите «Продолжить».</p>
+                  <p>Откройте сайт <a class="article__text-link" href="https://markirovka.crpt.ru/register">Честный знак</a> и нажмите «Зарегистрируйтесь». Убедитесь, что вы все настроили правильно, и нажмите
+                    «Продолжить».</p>
                 </div>
                 <div class="num-points pb-8">
                   <div class="number">3.</div>
@@ -288,7 +337,7 @@
                     <p>Перейдите по ссылке из письма и укажите:</p>
                     <p>- являетесь ли вы производителем или импортером товаров</p>
                     <p>- оператора ЭДО и ID участника ЭДО</p>
-                    <p>- являетесь ли вы членом ассоциации <a class="article__text-link" href="#">«GS1 Рус»</a>. Если да, введите идентификаторы GSP и GLN.</p>
+                    <p>- являетесь ли вы членом ассоциации <a class="article__text-link" href="http://www.gs1ru.org/">«GS1 Рус»</a>. Если да, введите идентификаторы GSP и GLN.</p>
                   </div>
                 </div>
                 <div class="num-points pb-8">
@@ -298,6 +347,7 @@
               </div>
 
               <div class="article__section">
+                <div class="anchor-block" id="rest"></div>
                 <h2 class="heading-h2 pb-16">Маркировка остатков</h2>
                 <p class="article__text pb-16">Вам понадобится принтер этикеток. Выберите подходящий
                   <a class="article__text-link" href="https://sbis.ru/catalog/yaroslavl/X3153239">в нашем каталоге</a>.</p>
@@ -342,6 +392,7 @@
               </div>
 
               <div class="article__section">
+                <div class="anchor-block" id="reception"></div>
                 <h2 class="heading-h2 pb-16">Приемка маркированной обуви</h2>
                 <h3 class="heading-h3 pb-8">Что понадобится</h3>
                 <div class="num-points pb-8">
@@ -364,6 +415,7 @@
                 <h3 class="heading-h3 pb-8">Оборудование для ввода и проверки марок</h3>
                 <div class="goods">
                   <div class="goods__item">
+                    <a href="https://play.google.com/store/apps/details?id=ru.tensor.sbis.storekeeper" class="goods__item-link" target="_blank"></a>
                     <div class="goods__column goods__about">
                       <h4 class="goods__header"><span>Приложение на ваш смартфон</span>
                         <div class="goods__mobile show-sm">
@@ -392,6 +444,7 @@
                     </div>
                   </div>
                   <div class="goods__item">
+                    <a href="https://sbis.ru/catalog/yaroslavl/X42625827648" class="goods__item-link" target="_blank"></a>
                     <div class="goods__column goods__about">
                       <h4 class="goods__header"><span>Приложение на ваш смартфон</span>
                         <div class="goods__mobile show-sm">
@@ -418,6 +471,7 @@
                     </div>
                   </div>
                   <div class="goods__item">
+                    <a href="https://sbis.ru/catalog/yaroslavl/X5587415" class="goods__item-link" target="_blank"></a>
                     <div class="goods__column goods__about">
                       <h4 class="goods__header"><span>Терминал сбора данных</span>
                         <div class="goods__mobile show-sm">
@@ -447,6 +501,7 @@
               </div>
 
               <div class="article__section">
+                <div class="anchor-block" id="wholesale"></div>
                 <h2 class="heading-h2 pb-16">Оптовая продажа маркированной обуви</h2>
                 <div class="article__image pb-16">
                   <picture>
@@ -465,6 +520,7 @@
               </div>
 
               <div class="article__section">
+                <div class="anchor-block" id="retail"></div>
                 <h2 class="heading-h2 pb-16">Розничная продажа маркированной обуви</h2>
                 <div class="article__image pb-16">
                   <picture>

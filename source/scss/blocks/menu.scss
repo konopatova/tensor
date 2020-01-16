@@ -1,0 +1,85 @@
+.dropdown-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 20vh;
+  padding-top: 84px;
+  z-index: -1;
+  background-color: #ffffff;
+  animation: slide-top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0.05s reverse
+    both;
+  user-select: none;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+
+  &--closed {
+    display: none;
+  }
+
+  &--padding {
+    padding-top: 100px;
+  }
+
+  &--opened {
+    display: block;
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-200px);
+  }
+}
+
+.dropdown-menu__content {
+  position: relative;
+  max-height: 100%;
+  overflow: auto;
+}
+
+.menu__list {
+  @include list-reset;
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.menu__item-wrap {
+  padding: 0 12px 24px;
+  flex-basis: 25%;
+  max-width: 25%;
+  flex-shrink: 0;
+  text-align: center;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: normal;
+
+  @include tablet {
+    flex-basis: 33%;
+    max-width: 33%;
+  }
+
+  @include mobile {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
+.menu__item-link {
+  color: $light-font-color;
+  padding-bottom: 1px;
+  border-bottom: 1px solid transparent;
+  @include transitionMulty(color, border);
+
+  &:hover {
+    color: $link-hover-color;
+    border-bottom: 1px solid $link-hover-color;
+    @include transitionMulty(color, border);
+  }
+}
