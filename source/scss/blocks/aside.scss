@@ -50,6 +50,10 @@
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.11);
     background-color: #f0f5fb;
   }
+
+  &:active {
+    background-color: $accent-color-2;
+  }
 }
 
 .aside__separator {

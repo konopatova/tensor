@@ -31,6 +31,7 @@
     transform-origin: top;
     opacity: 0;
   }
+
   100% {
     transform: rotateX(0deg);
     transform-origin: top;
@@ -79,6 +80,17 @@
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     color: #000000;
     @include transitionMulty(background-color, box-shadow);
+  }
+
+  &:hover {
+    .menu__item-link {
+      color: #000000;
+      @include transition(color);
+    }
+  }
+
+  &:active::before {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   }
 
   @include tablet {
