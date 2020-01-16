@@ -24,6 +24,7 @@
   var burgerButton = document.querySelector('.burger-button__open');
   var closeButton = document.querySelector('.burger-button__close');
   var menu = document.querySelector('.dropdown-menu');
+  var menuLinks = document.querySelectorAll('.menu__item-link');
   var isOpened = menu.classList.contains('dropdown-menu--opened');
   var isClosed = menu.classList.contains('dropdown-menu--closed');
   var disableBodyScroll = bodyScrollLock.disableBodyScroll;
@@ -53,8 +54,14 @@
     enableBodyScroll();
   })
 
-
-  console.log(closeButton)
-  console.log(burgerButton)
+  for (let i = 0; i < menuLinks.length; i += 1) {
+    menuLinks[i].addEventListener('click', function () {
+      menu.classList.remove('dropdown-menu--opened');
+      menu.classList.add('dropdown-menu--closed');
+      burgerButton.classList.remove('hidden');
+      closeButton.classList.add('hidden');
+      enableBodyScroll();
+    });
+  }
 
 })();
