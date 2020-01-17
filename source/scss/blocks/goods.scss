@@ -39,7 +39,6 @@
 
 .goods__column {
   width: calc((100% - 35%) / 2);
-  position: relative;
 }
 
 .goods__header {
@@ -68,6 +67,8 @@
 }
 
 .goods__picture {
+  align-self: center;
+
   @include mobile {
     width: 100%;
     order: 1;
@@ -119,19 +120,23 @@
 }
 
 .goods__image {
-  position: relative;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%);
-  width: auto;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  align-self: center;
 
   &--1 {
-    position: absolute;
-    transform: translate(-46%, -2%);
+    bottom: -28%;
+    transform: translate(0, 0);
   }
 
   @include mobile {
+    transform: translate(-50%, 0);
+    width: auto;
     position: relative;
+    display: block;
+    top: 50%;
+    left: 50%;
   }
 }
 
