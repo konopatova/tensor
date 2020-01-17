@@ -24,14 +24,25 @@
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.2s linear, height 0.2s linear, font 0.2s linear;
 
+    @include mobile {
+      min-height: 56px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    &.header {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .header__nav-link {
+      padding-bottom: 5px;
+      border-bottom-width: 3px;
+    }
+
     .burger-button {
       .burger-button__line {
         transition: margin 0.2s linear;
         margin-top: 3px;
-      }
-
-      @include tablet {
-        height: 20px;
       }
 
       &:hover {
@@ -39,6 +50,10 @@
           @include transition(background-color);
           background-color: $accent-color-2;
         }
+      }
+
+      @include tablet {
+        height: 20px;
       }
     }
 
@@ -51,21 +66,12 @@
       height: 28px;
       transition: width 0.2s linear, height 0.2s linear;
     }
-
-    &.header {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-
-    .header__nav-link {
-      padding-bottom: 5px;
-      border-bottom-width: 3px;
-    }
   }
 
-  @include mobile {
-    min-height: 56px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  .header__container {
+    @include mobile {
+      padding-top: 10px;
+    }
   }
 }
 
